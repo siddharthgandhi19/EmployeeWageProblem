@@ -7,8 +7,12 @@ namespace EmployeeWageProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Problem statement");
-            EmployeeWage.EmpWage("Byjus", 20, 22, 25);
-            EmployeeWage.EmpWage("Scaler", 20, 22, 25);
+            EmpWageBuilderObject byjus = new EmpWageBuilderObject("Byjus", 20, 2, 20);
+            EmpWageBuilderObject extra = new EmpWageBuilderObject("ExtraMarks", 20, 2, 20);
+            byjus.ComputeEmpWage();
+            Console.WriteLine(byjus.ToString());
+            extra.ComputeEmpWage();
+            Console.WriteLine(extra.ToString());
         }
     }
 }
